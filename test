@@ -1,0 +1,22 @@
+<div class="mungholder">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehomYVCGZryhfLZ1uEfDOCyQr5q_KHD99LRQu2YrUxX4ZviA/viewform?embedded=true" width="640" height="2776" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>br />
+<div id="timersoal">
+Waktu Pengerjaan: <span id="time">10:00</span> menit!</div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+function startTimer(t,n){var e,r,a=t;setInterval(function(){e=parseInt(a/60,10),r=parseInt(a%60,10),e=e<10?"0"+e:e,r=r<10?"0"+r:r,n.textContent=e+":"+r,--a<0&&(a=t)},1e3)}
+window.onload = function () {
+    var fiveMinutes = 60 * 10,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+//]]>
+</script>
+
+<style>
+.mungholder{width:100%;height:100%;position:relative}
+#time{color: #f5fe02;}
+#timersoal{background-color: #222;border-radius: 5px;color: #f5f5f5;font-size: 15px;line-height: 1.54;padding: 3px;text-align: center;border: 1px solid black;position: absolute;top: 0;left: 2px;width: 98%;font-weight: bold;}
+</style>
